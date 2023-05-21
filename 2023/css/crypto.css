@@ -360,8 +360,8 @@ select:visited {
 
 .cr-btn a {
   color: #fff;
-  width: 155px;
-  height: 58px;
+  width: 150px;
+  height: 38px;
   border-radius: 30px;
   background-color: #F8A501;
   -webkit-transition: 500ms all ease;
@@ -371,7 +371,6 @@ select:visited {
 .cr-btn a:hover {
   background-color: #02DFBF;
 }
-
 /*---------------------------------------------------- */
 /*Header area*/
 /*----------------------------------------------------*/
