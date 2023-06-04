@@ -32,6 +32,9 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script>
+
+
+
         window.dataLayer = window.dataLayer || [];
         function gtag() {
             dataLayer.push(arguments);
@@ -86,8 +89,8 @@
                             <li> <a class="nav-link" href="#cr-blog">Sponsor</a></li>
                             <li>
                                 <div class="cr-btn d-flex justify-content-center">
-                                    <a class="d-flex justify-content-center align-items-baseline"
-                                        href="register" target="_blank">Register
+                                    <a class="d-flex justify-content-center align-items-baseline" href="register"
+                                        target="_blank">Register
                                         Now</a>
                                 </div>
                             </li>
@@ -119,8 +122,8 @@
                                 <li> <a class="nav-link" href="#cr-blog">Sponsor</a></li>
                                 <li>
                                     <div class="cr-btn  d-flex justify-content-center">
-                                        <a class="d-flex justify-content-center align-items-baseline"
-                                            href="register" target="_blank">Register
+                                        <a class="d-flex justify-content-center align-items-baseline" href="register"
+                                            target="_blank">Register
                                             Now</a>
                                     </div>
                                 </li>
@@ -145,16 +148,19 @@
         <span class="cr-banner-shape6 position-absolute"><img src="2023/img/st9.png" alt=""></span>
         <div class="container">
             <div class="cripto-banner-text cr-headline pera-content">
-                <h1 class="wow fadeFromUp text-left" data-wow-delay="300ms" data-wow-duration="1500ms" style="font-family: 'Horizon', sans-serif;">
-                    <span style="display: block; margin: 0; color: rgb(255, 255, 255);">ALE <span style="color: rgb(63, 208, 124);">2023</span></span>
+                <h1 class="wow fadeFromUp text-left" data-wow-delay="300ms" data-wow-duration="1500ms"
+                    style="font-family: 'Horizon', sans-serif;">
+                    <span style="display: block; margin: 0; color: rgb(255, 255, 255);">ALE <span
+                            style="color: rgb(63, 208, 124);">2023</span></span>
                 </h1>
-                <p class="wow fadeFromUp text-left" data-wow-delay="600ms" data-wow-duration="1500ms" style="font-family: 'Horizon', sans-serif;">
+                <p class="wow fadeFromUp text-left" data-wow-delay="600ms" data-wow-duration="1500ms"
+                    style="font-family: 'Horizon', sans-serif;">
                     <span id="animated-text-loop"></span>
                 </p>
             </div>
         </div>
     </section>
-    
+
     <script>
         var words = ["BERWARNA BERMAKNA BERWARNA BERMAKNA", "BERWARNA BERMAKNA BERWARNA BERMAKNA"];
         var currentWordIndex = 0;
@@ -163,11 +169,11 @@
         var typingSpeed = 100;
         var deletingSpeed = 80;
         var delayBetweenWords = 1000;
-    
+
         function animateText() {
             var animatedTextLoopElement = document.getElementById("animated-text-loop");
             var currentWord = words[currentWordIndex];
-    
+
             if (!isDeleting && currentCharIndex < currentWord.length) {
                 animatedTextLoopElement.innerHTML += currentWord.charAt(currentCharIndex);
                 currentCharIndex++;
@@ -179,11 +185,11 @@
                 setTimeout(animateText, deletingSpeed);
             } else {
                 isDeleting = !isDeleting;
-    
+
                 if (!isDeleting) {
                     currentWordIndex = (currentWordIndex + 1) % words.length;
                 }
-    
+
                 if (isDeleting && currentCharIndex === -1) {
                     setTimeout(animateText, delayBetweenWords);
                 } else {
@@ -191,10 +197,10 @@
                 }
             }
         }
-    
+
         animateText();
     </script>
-    
+
     <!-- End of Banner section
     ============================================= -->
 
@@ -204,611 +210,629 @@
         <div class="container">
             <div class="cr-partner-content">
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Horizon&display=swap');
-        .custom-container {
-            font-size: 45px;
-            text-align: center;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            color: #ffffff;
-            font-family: 'Horizon', sans-serif;
-            
-        }
+                <style>
+                    @import url('https://fonts.googleapis.com/css2?family=Horizon&display=swap');
 
-        .custom-container .countdown {
-            font-size: 55px;
-            font-weight: bold;
-            color: #1eda24;
-            font-family: 'Horizon', sans-serif;
-            
+                    .custom-container {
+                        font-size: 45px;
+                        text-align: center;
+                        margin-top: 0px;
+                        margin-bottom: 0px;
+                        color: #ffffff;
+                        font-family: 'Horizon', sans-serif;
 
-        }
-    </style>
-    </head>
+                    }
 
-    <body>
-        <div class="custom-container">
-            <a> Event Started In</a>
-            <div class="countdown" id="countdown"></div>
+                    .custom-container .countdown {
+                        font-size: 55px;
+                        font-weight: bold;
+                        color: #1eda24;
+                        font-family: 'Horizon', sans-serif;
+
+
+                    }
+                </style>
+                </head>
+
+                <body>
+                    <div class="custom-container">
+                        <a> Event Started In</a>
+                        <div class="countdown" id="countdown"></div>
+                    </div>
+
+                    <script>
+                        // Set the countdown date (format: year, month (0-11), day, hour, minute, second)
+                        var countdownDate = new Date(2023, 7, 26, 0, 0, 0).getTime();
+
+                        // Update the countdown every 1 second
+                        var countdownInterval = setInterval(function () {
+                            // Get the current date and time
+                            var now = new Date().getTime();
+
+                            // Find the distance between now and the countdown date
+                            var distance = countdownDate - now;
+
+                            // Calculate the days, hours, minutes, and seconds remaining
+                            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                            // Display the countdown in the element with id="countdown"
+                            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+                                + minutes + "m " + seconds + "s ";
+
+                            // If the countdown is finished, display a message
+                            if (distance < 0) {
+                                clearInterval(countdownInterval);
+                                document.getElementById("countdown").innerHTML = "Countdown expired";
+                            }
+                        }, 1000);
+                    </script>
+            </div>
         </div>
-
-        <script>
-            // Set the countdown date (format: year, month (0-11), day, hour, minute, second)
-            var countdownDate = new Date(2023, 7, 26, 0, 0, 0).getTime();
-
-            // Update the countdown every 1 second
-            var countdownInterval = setInterval(function () {
-                // Get the current date and time
-                var now = new Date().getTime();
-
-                // Find the distance between now and the countdown date
-                var distance = countdownDate - now;
-
-                // Calculate the days, hours, minutes, and seconds remaining
-                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                // Display the countdown in the element with id="countdown"
-                document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-                    + minutes + "m " + seconds + "s ";
-
-                // If the countdown is finished, display a message
-                if (distance < 0) {
-                    clearInterval(countdownInterval);
-                    document.getElementById("countdown").innerHTML = "Countdown expired";
-                }
-            }, 1000);
-        </script>
         </div>
-    </div>            
-</div>
-</section>
-        <!-- End of countdown section
+    </section>
+    <!-- End of countdown section
     ============================================= -->
 
-        <!-- Start of Feature section
+    <!-- Start of Feature section
     ============================================= -->
-        <section id="cr-feature" class="cr-feature-section position-relative">
-            <span class="cr-shape1 position-absolute"><img src="2023/img/sh1 (1).png" alt=""></span>
-            <span class="cr-shape2 position-absolute"><img src="2023/img/sh6.png" alt=""></span>
-            <span class="cr-shape3 position-absolute"><img src="2023/img/st2.png" alt=""></span>
-            <span class="cr-shape4 position-absolute"><img src="2023/img/st10.png" alt=""></span>
-            <div class="container">
-                <div class="cr-feature-content">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="cr-feature-item-wrapper">
-                                <div class="row">
-                                    <div class="col-md-4 wow fadeFromUp" data-wow-delay="0ms"
-                                        data-wow-duration="1500ms">
-                                        <div class="cr-feature-item-innerbox">
-                                            <div class="thx-inner-item">
-                                                <div
-                                                    class="thx-inner-icon d-flex align-items-center justify-content-center">
-                                                    <img src="2023/img/banner.png" alt="" class="lomba_lang">
-                                                </div>
-                                                <div class="thx-inner-text cr-headline pera-content">
-                                                    <h3></h3>
-                                                    <p>Sebagai wadah akselerasi dan kolaborasi khususnya dalam aspek
-                                                        kepemimpinan</p>
-                                                </div>
+    <section id="cr-feature" class="cr-feature-section position-relative">
+        <span class="cr-shape1 position-absolute"><img src="2023/img/sh1 (1).png" alt=""></span>
+        <span class="cr-shape2 position-absolute"><img src="2023/img/sh6.png" alt=""></span>
+        <span class="cr-shape3 position-absolute"><img src="2023/img/st2.png" alt=""></span>
+        <span class="cr-shape4 position-absolute"><img src="2023/img/st10.png" alt=""></span>
+        <div class="container">
+            <div class="cr-feature-content">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="cr-feature-item-wrapper">
+                            <div class="row">
+                                <div class="col-md-4 wow fadeFromUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                    <div class="cr-feature-item-innerbox">
+                                        <div class="thx-inner-item">
+                                            <div
+                                                class="thx-inner-icon d-flex align-items-center justify-content-center">
+                                                <img src="2023/img/banner.png" alt="" class="lomba_lang">
+                                            </div>
+                                            <div class="thx-inner-text cr-headline pera-content">
+                                                <h3></h3>
+                                                <p>Sebagai wadah akselerasi dan kolaborasi khususnya dalam aspek
+                                                    kepemimpinan</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 wow fadeFromUp" data-wow-delay="300ms"
-                                        data-wow-duration="1500ms">
-                                        <div class="cr-feature-item-innerbox">
-                                            <div class="thx-inner-item">
-                                                <div
-                                                    class="thx-inner-icon d-flex align-items-center justify-content-center">
-                                                    <img src="2023/img/banner.png" alt="">
-                                                </div>
-                                                <div class="thx-inner-text cr-headline pera-content">
-                                                    <h3></h3>
-                                                    <p>Mengembangkan minat dan bakat mahasiswa/i dalam kepemimpinan dan
-                                                        juga
-                                                        kreativitas
-                                                    </p>
-                                                </div>
+                                </div>
+                                <div class="col-md-4 wow fadeFromUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+                                    <div class="cr-feature-item-innerbox">
+                                        <div class="thx-inner-item">
+                                            <div
+                                                class="thx-inner-icon d-flex align-items-center justify-content-center">
+                                                <img src="2023/img/banner.png" alt="">
+                                            </div>
+                                            <div class="thx-inner-text cr-headline pera-content">
+                                                <h3></h3>
+                                                <p>Mengembangkan minat dan bakat mahasiswa/i dalam kepemimpinan dan
+                                                    juga
+                                                    kreativitas
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 wow fadeFromUp" data-wow-delay="600ms"
-                                        data-wow-duration="1500ms">
-                                        <div class="cr-feature-item-innerbox">
-                                            <div class="thx-inner-item">
-                                                <div
-                                                    class="thx-inner-icon d-flex align-items-center justify-content-center">
-                                                    <img src="2023/img/banner.png" alt="">
-                                                </div>
-                                                <div class="thx-inner-text cr-headline pera-content">
-                                                    <h3></h3>
-                                                    <p>Membantu Indonesia dalam mempersiapkan sumber daya manusia yang
-                                                        unggul pada era society 5.0
-                                                    </p>
-                                                </div>
+                                </div>
+                                <div class="col-md-4 wow fadeFromUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+                                    <div class="cr-feature-item-innerbox">
+                                        <div class="thx-inner-item">
+                                            <div
+                                                class="thx-inner-icon d-flex align-items-center justify-content-center">
+                                                <img src="2023/img/banner.png" alt="">
+                                            </div>
+                                            <div class="thx-inner-text cr-headline pera-content">
+                                                <h3></h3>
+                                                <p>Membantu Indonesia dalam mempersiapkan sumber daya manusia yang
+                                                    unggul pada era society 5.0
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 wow fadeFromUp" data-wow-delay="900ms"
-                                        data-wow-duration="1500ms">
-                                        <div class="cr-feature-item-innerbox">
-                                            <div class="thx-inner-item">
-                                                <div
-                                                    class="thx-inner-icon d-flex align-items-center justify-content-center">
-                                                    <img src="2023/img/banner.png" alt="">
-                                                </div>
-                                                <div class="thx-inner-text cr-headline pera-content">
-                                                    <h3></h3>
-                                                    <p>Meningkatkan skill kepemimpinan pelajar PPI Ankara</p>
-                                                </div>
+                                </div>
+                                <div class="col-md-4 wow fadeFromUp" data-wow-delay="900ms" data-wow-duration="1500ms">
+                                    <div class="cr-feature-item-innerbox">
+                                        <div class="thx-inner-item">
+                                            <div
+                                                class="thx-inner-icon d-flex align-items-center justify-content-center">
+                                                <img src="2023/img/banner.png" alt="">
+                                            </div>
+                                            <div class="thx-inner-text cr-headline pera-content">
+                                                <h3></h3>
+                                                <p>Meningkatkan skill kepemimpinan pelajar PPI Ankara</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 wow fadeFromUp" data-wow-delay="600ms"
-                                        data-wow-duration="1500ms">
-                                        <div class="cr-feature-item-innerbox">
-                                            <div class="thx-inner-item">
-                                                <div
-                                                    class="thx-inner-icon d-flex align-items-center justify-content-center">
-                                                    <img src="2023/img/banner.png" alt="">
-                                                </div>
-                                                <div class="thx-inner-text cr-headline pera-content">
-                                                    <h3></h3>
-                                                    <p>Mempererat hubungan persaudaraan antar pelajar PPI Ankara</p>
-                                                </div>
+                                </div>
+                                <div class="col-md-4 wow fadeFromUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+                                    <div class="cr-feature-item-innerbox">
+                                        <div class="thx-inner-item">
+                                            <div
+                                                class="thx-inner-icon d-flex align-items-center justify-content-center">
+                                                <img src="2023/img/banner.png" alt="">
+                                            </div>
+                                            <div class="thx-inner-text cr-headline pera-content">
+                                                <h3></h3>
+                                                <p>Mempererat hubungan persaudaraan antar pelajar PPI Ankara</p>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeFromRight" data-wow-delay="300ms" data-wow-duration="1500ms">
+                        <div class="cr-feature-text-wrapper cr-headline pera-content">
+                            <div class="cr-section-title cr-headline">
+                                <span>BERWARNA BERMAKNA BERWARNA BERMAKNA</span>
+                                <h2>Tujuan ALE</h2>
+                                <img src="2023/img/banner.png" width="50%">
+                            </div>
+                            <div class="cr-feature-text-area">
+                                <p>
+
+                                </p>
+                                <div class="cr-btn">
+                                    <a class="d-flex justify-content-center align-items-center" href="#"
+                                        target="_blank">Explore More</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 wow fadeFromRight" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <div class="cr-feature-text-wrapper cr-headline pera-content">
-                                <div class="cr-section-title cr-headline">
-                                    <span>BERWARNA BERMAKNA BERWARNA BERMAKNA</span>
-                                    <h2>Tujuan ALE</h2>
-                                    <img src="2023/img/banner.png" width="50%">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Feature section
+    ============================================= -->
+    <!-- Start of Team section
+    ============================================= -->
+    <section id="cr-live-market" class="cr-team-section position-relative">
+        <div class="container">
+            <div class="cr-section-title text-center cr-headline wow fadeFromUp" data-wow-delay="0ms"
+                data-wow-duration="1500ms">
+                <h2>Our Event of ALE 2023</h2>
+                <span>BERWARNA BERMAKNA BERWARNA BERMAKNA </span>
+            </div>
+            <div class="cr-team-content">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 wow fadeFromUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="cr-team-inner-item">
+                            <div class="thx-inner-item d-flex align-items-center">
+                                <div class="thx-inner-img">
+                                    <img src="#" alt="">
                                 </div>
-                                <div class="cr-feature-text-area">
+                                <div class="thx-inner-text cr-headline pera-content">
+                                    <h3>Webinar Session</h3>
                                     <p>
-
-                                    </p>
-                                    <div class="cr-btn">
-                                        <a class="d-flex justify-content-center align-items-center" href="#"
-                                            target="_blank">Explore More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End of Feature section
-    ============================================= -->
-        <!-- Start of Team section
-    ============================================= -->
-        <section id="cr-live-market" class="cr-team-section position-relative">
-            <div class="container">
-                <div class="cr-section-title text-center cr-headline wow fadeFromUp" data-wow-delay="0ms"
-                    data-wow-duration="1500ms">
-                    <h2>Our Event of ALE 2023</h2>
-                    <span>BERWARNA BERMAKNA BERWARNA BERMAKNA </span>
-                </div>
-                <div class="cr-team-content">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 wow fadeFromUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <div class="cr-team-inner-item">
-                                <div class="thx-inner-item d-flex align-items-center">
-                                    <div class="thx-inner-img">
-                                        <img src="#" alt="">
-                                    </div>
-                                    <div class="thx-inner-text cr-headline pera-content">
-                                        <h3>Webinar Session</h3>
-                                        <p>
-                                            LOREM IPSUM LOREM IPSUM LOREM IPSUM </p>
+                                        LOREM IPSUM LOREM IPSUM LOREM IPSUM </p>
+                                    <div class="social-link">
                                         <div class="social-link">
-                                            <div class="social-link">
-                                                <a href="#" target="_blank"><i class="fab fa-youtube"></i> Watch
-                                                    Here</a>
-                                                <br><br>
-                                                <a href="#" target="#">About</a>
-                                                <a href="#" target="_blank">Guidebook</a>
-                                            </div>
+                                            <a href="#" target="_blank"><i class="fab fa-youtube"></i> Watch
+                                                Here</a>
+                                            <br><br>
+                                            <a href="#" target="#">About</a>
+                                            <a href="#" target="_blank">Guidebook</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 wow fadeFromUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <div class="cr-team-inner-item">
-                                <div class="thx-inner-item d-flex align-items-center">
-                                    <div class="thx-inner-img">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="thx-inner-text cr-headline pera-content">
-                                        <h3>Mentoring Session</h3>
-                                        <p>
-                                            LOREM IPSUM LOREM IPSUM LOREM IPSUM </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeFromUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="cr-team-inner-item">
+                            <div class="thx-inner-item d-flex align-items-center">
+                                <div class="thx-inner-img">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="thx-inner-text cr-headline pera-content">
+                                    <h3>Mentoring Session</h3>
+                                    <p>
+                                        LOREM IPSUM LOREM IPSUM LOREM IPSUM </p>
+                                    <div class="social-link">
                                         <div class="social-link">
-                                            <div class="social-link">
-                                                <a href="#" target="_blank"><i class="fab fa-youtube"></i> Watch Here
-                                                </a>
-                                                <br><br>
-                                                <a href="#" target="_blank">About</a>
-                                                <a href="#" target="_blank">Guidebook</a>
-                                            </div>
+                                            <a href="#" target="_blank"><i class="fab fa-youtube"></i> Watch Here
+                                            </a>
+                                            <br><br>
+                                            <a href="#" target="_blank">About</a>
+                                            <a href="#" target="_blank">Guidebook</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 wow fadeFromUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <div class="cr-team-inner-item">
-                                <div class="thx-inner-item d-flex align-items-center">
-                                    <div class="thx-inner-img">
-                                        <img src="#" alt="">
-                                    </div>
-                                    <div class="thx-inner-text cr-headline pera-content">
-                                        <h3>Summer Camp</h3>
-                                        <p>
-                                            LOREM IPSUM LOREM IPSUM LOREM IPSUM </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeFromUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="cr-team-inner-item">
+                            <div class="thx-inner-item d-flex align-items-center">
+                                <div class="thx-inner-img">
+                                    <img src="#" alt="">
+                                </div>
+                                <div class="thx-inner-text cr-headline pera-content">
+                                    <h3>Summer Camp</h3>
+                                    <p>
+                                        LOREM IPSUM LOREM IPSUM LOREM IPSUM </p>
+                                    <div class="social-link">
                                         <div class="social-link">
-                                            <div class="social-link">
-                                                <a href="#" target="_blank"><i class="fab fa-youtube"></i> Watch
-                                                    Here</a>
-                                                <br><br>
-                                                <a href="#" target="_blank">About</a>
-                                                <a href="#" target="_blank">Guidebook</a>
-                                            </div>
+                                            <a href="#" target="_blank"><i class="fab fa-youtube"></i> Watch
+                                                Here</a>
+                                            <br><br>
+                                            <a href="#" target="_blank">About</a>
+                                            <a href="#" target="_blank">Guidebook</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-
-
                     </div>
+
+
+
                 </div>
             </div>
-        </section>
-        <!-- End of Team section
+        </div>
+    </section>
+    <!-- End of Team section
     ============================================= -->
 
 
 
-        <!-- Start of Roadmap section
+    <!-- Start of Roadmap section
     ============================================= -->
-        <section id="cr-roadmap" class="cr-roadmap-section position-relative">
-            <span class="cr-shape1 position-absolute"><img src="2023/img/sh4.png" alt=""></span>
-            <span class="cr-shape2 position-absolute"><img src="2023/img/sh2.png" alt=""></span>
-            <span class="cr-shape3 position-absolute"><img src="2023/img/st2.png" alt=""></span>
-            <div class="container">
-                <div class="cr-section-title cr-headline text-center">
-                    <span>Timeline</span>
-                    <h2>The Timeline of our Event</h2>
+    <section id="cr-roadmap" class="cr-roadmap-section position-relative">
+        <span class="cr-shape1 position-absolute"><img src="2023/img/sh4.png" alt=""></span>
+        <span class="cr-shape2 position-absolute"><img src="2023/img/sh2.png" alt=""></span>
+        <span class="cr-shape3 position-absolute"><img src="2023/img/st2.png" alt=""></span>
+        <div class="container">
+            <div class="cr-section-title cr-headline text-center">
+                <span>Timeline</span>
+                <h2>The Timeline of our Event</h2>
+            </div>
+            <div class="cr-roadmap-content position-relative">
+                <span class="cr-shape4 position-absolute"><img src="2023/img/st7.png" alt=""></span>
+                <span class="cr-shape5 position-absolute"><img src="2023/img/st8.png" alt=""></span>
+                <div class="cr-roadmap-line position-absolute">
+                    <img src="2023/img/line.png" alt="">
                 </div>
-                <div class="cr-roadmap-content position-relative">
-                    <span class="cr-shape4 position-absolute"><img src="2023/img/st7.png" alt=""></span>
-                    <span class="cr-shape5 position-absolute"><img src="2023/img/st8.png" alt=""></span>
-                    <div class="cr-roadmap-line position-absolute">
-                        <img src="2023/img/line.png" alt="">
-                    </div>
-                    <div class="road-map-history">
-                        <div class="cr-roadmap-history-steps clearfix  wow fadeFromRight" data-wow-delay="0ms"
-                            data-wow-duration="1500ms">
-                            <div class="cr-roadmap-history-item-area position-relative clearfix">
-                                <div class="cr-roadmap-history-inner-item headline pera-content position-relative">
-                                    <div class="cr-roadmap-item-text cr-headline pera-content">
-                                        <span class="rd-shape1 position-absolute"><img src="2023/img/sh1.png"
-                                                alt=""></span>
-                                        <span class="rd-shape2 position-absolute"><img src="2023/img/sh2 (1).png"
-                                                alt=""></span>
-                                        <div class="cr-roadmap-year" style="right: -205px">
-                                        </div>
-                                        <h3>Open Registration</h3>
-                                        <span>2 - 12 July 2023</span>
+                <div class="road-map-history">
+                    <div class="cr-roadmap-history-steps clearfix  wow fadeFromRight" data-wow-delay="0ms"
+                        data-wow-duration="1500ms">
+                        <div class="cr-roadmap-history-item-area position-relative clearfix">
+                            <div class="cr-roadmap-history-inner-item headline pera-content position-relative">
+                                <div class="cr-roadmap-item-text cr-headline pera-content">
+                                    <span class="rd-shape1 position-absolute"><img src="2023/img/sh1.png" alt=""></span>
+                                    <span class="rd-shape2 position-absolute"><img src="2023/img/sh2 (1).png"
+                                            alt=""></span>
+                                    <div class="cr-roadmap-year" style="right: -205px">
                                     </div>
+                                    <h3>Open Registration</h3>
+                                    <span>2 - 12 July 2023</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cr-roadmap-history-steps clearfix  wow fadeFromRight" data-wow-delay="0ms"
-                            data-wow-duration="1500ms">
-                            <div class="cr-roadmap-history-item-area position-relative clearfix">
-                                <div class="cr-roadmap-history-inner-item headline pera-content position-relative">
-                                    <div class="cr-roadmap-item-text cr-headline pera-content">
-                                        <span class="rd-shape1 position-absolute"><img src="2023/img/sh3.png"
-                                                alt=""></span>
-                                        <span class="rd-shape2 position-absolute"><img src="2023/img/sh2 (2).png"
-                                                alt=""></span>
-                                        <div class="cr-roadmap-year"></div>
-                                        <h3>Webinar Section</h3>
-                                        <span>15 July 2023</span>
-                                    </div>
+                    </div>
+                    <div class="cr-roadmap-history-steps clearfix  wow fadeFromRight" data-wow-delay="0ms"
+                        data-wow-duration="1500ms">
+                        <div class="cr-roadmap-history-item-area position-relative clearfix">
+                            <div class="cr-roadmap-history-inner-item headline pera-content position-relative">
+                                <div class="cr-roadmap-item-text cr-headline pera-content">
+                                    <span class="rd-shape1 position-absolute"><img src="2023/img/sh3.png" alt=""></span>
+                                    <span class="rd-shape2 position-absolute"><img src="2023/img/sh2 (2).png"
+                                            alt=""></span>
+                                    <div class="cr-roadmap-year"></div>
+                                    <h3>Webinar Section</h3>
+                                    <span>15 July 2023</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="cr-roadmap-history-steps clearfix  wow fadeFromRight" data-wow-delay="0ms"
-                            data-wow-duration="1500ms">
-                            <div class="cr-roadmap-history-item-area position-relative clearfix">
-                                <div class="cr-roadmap-history-inner-item headline pera-content position-relative">
-                                    <div class="cr-roadmap-item-text cr-headline pera-content">
-                                        <span class="rd-shape1 position-absolute"><img src="2023/img/sh1.png"
-                                                alt=""></span>
-                                        <span class="rd-shape2 position-absolute"><img src="2023/img/sh2 (1).png"
-                                                alt=""></span>
-                                        <div class="cr-roadmap-year"></div>
-                                        <h3>Mentoring Section</h3>
-                                        <span>29 July 2023 </span>
-                                    </div>
+                    </div>
+                    <div class="cr-roadmap-history-steps clearfix  wow fadeFromRight" data-wow-delay="0ms"
+                        data-wow-duration="1500ms">
+                        <div class="cr-roadmap-history-item-area position-relative clearfix">
+                            <div class="cr-roadmap-history-inner-item headline pera-content position-relative">
+                                <div class="cr-roadmap-item-text cr-headline pera-content">
+                                    <span class="rd-shape1 position-absolute"><img src="2023/img/sh1.png" alt=""></span>
+                                    <span class="rd-shape2 position-absolute"><img src="2023/img/sh2 (1).png"
+                                            alt=""></span>
+                                    <div class="cr-roadmap-year"></div>
+                                    <h3>Mentoring Section</h3>
+                                    <span>29 July 2023 </span>
                                 </div>
                             </div>
                         </div>
-                        <<div class="cr-roadmap-history-steps clearfix  wow fadeFromRight" data-wow-delay="0ms"
-                            data-wow-duration="1500ms">
-                            <div class="cr-roadmap-history-item-area position-relative clearfix">
-                                <div class="cr-roadmap-history-inner-item headline pera-content position-relative">
-                                    <div class="cr-roadmap-item-text cr-headline pera-content">
-                                        <span class="rd-shape1 position-absolute"><img src="2023/img/sh3.png"
-                                                alt=""></span>
-                                        <span class="rd-shape2 position-absolute"><img src="2023/img/sh2 (2).png"
-                                                alt=""></span>
-                                        <div class="cr-roadmap-year"></div>
-                                        <h3>Summer Camp</h3>
-                                        <span>24 - 26 Agustus 2023</span>
-                                    </div>
+                    </div>
+                    <<div class="cr-roadmap-history-steps clearfix  wow fadeFromRight" data-wow-delay="0ms"
+                        data-wow-duration="1500ms">
+                        <div class="cr-roadmap-history-item-area position-relative clearfix">
+                            <div class="cr-roadmap-history-inner-item headline pera-content position-relative">
+                                <div class="cr-roadmap-item-text cr-headline pera-content">
+                                    <span class="rd-shape1 position-absolute"><img src="2023/img/sh3.png" alt=""></span>
+                                    <span class="rd-shape2 position-absolute"><img src="2023/img/sh2 (2).png"
+                                            alt=""></span>
+                                    <div class="cr-roadmap-year"></div>
+                                    <h3>Summer Camp</h3>
+                                    <span>24 - 26 Agustus 2023</span>
                                 </div>
                             </div>
-                    </div>
-
-                </div>
-            </div>
-            </div>
-        </section>
-        <!-- End of Roadmap section
-    ============================================= -->
-
-        <!-- Start of testimonial section
-    ============================================= -->
-        <section id="cr-testimonial" class="cr-testimonial-section">
-            <div class="container">
-                <div class="cr-section-title cr-headline text-center wow fadeFromRight" data-wow-delay="0ms"
-                    data-wow-duration="1500ms">
-                    <span>Gallery</span>
-                    <h2>1<sup>st</sup>Ankara Leadership Experience</h2>
-                </div>
-
-                <div class="cr-testimonial-content">
-                    <div id="nanogallery2" data-nanogallery2='{
-                        "thumbnailHeight":  250,
-                        "thumbnailWidth":   350
-                      }'>
-
-                        <!-- gallery content -->
-                        <a href="2023/img/1.JPG" data-ngThumb="2023/img/1.JPG"></a>
-                        <a href="2023/img/2.JPG" data-ngThumb="2023/img/2.JPG"></a>
-                        <a href="2023/img/3.JPG" data-ngThumb="2023/img/3.JPG"></a>
-                        <a href="2023/img/4.JPG" data-ngThumb="2023/img/4.JPG"></a>
-                        <a href="2023/img/5.JPG" data-ngThumb="2023/img/5.JPG"></a>
-                        <a href="2023/img/6.JPG" data-ngThumb="2023/img/6.JPG"></a>
-                        <a href="2023/img/7.JPG" data-ngThumb="2023/img/7.JPG"></a>
-                        <a href="2023/img/8.JPG" data-ngThumb="2023/img/8.JPG"></a>
-                        <a href="2023/img/9.JPG" data-ngThumb="2023/img/9.JPG"></a>
-                        <a href="2023/img/10.JPG" data-ngThumb="2023/img/10.JPG"></a>
-                        <a href="2023/img/11.JPG" data-ngThumb="2023/img/11.JPG"></a>
-                        <a href="2023/img/12.JPG" data-ngThumb="2023/img/12.JPG"></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End of testimonial section
-    ============================================= -->
-
-        <!-- Start of app download section
-    ============================================= -->
-        <section id="cr-app-download" class="cr-app-download-section">
-            <div class="container">
-                <div class="cr-app-download-content cr-headline pera-content position-relative"
-                    data-background="2023/img/app-bg.png">
-                    <span class="cr-shape2 position-absolute"><img src="2023/img/crypto/shape/st8.png" alt=""></span>
-                    <div class="cr-shape1 position-absolute">
-                        <img src="2023/img/crypto/shape/cir.png" alt="">
-                    </div>
-                    <div class="cr-app-download-img position-absolute">
-                        <img src="2023/img/banner.png" alt="">
-                    </div>
-                    <div class="cr-app-download-text-wrapper">
-                        <h2>ALE 2023</h2>
-                        <p>BERWARNA BERMAKNA BERWARNA BERMAKNA</p>
-                        <div class="cr-app-download-btn d-flex">
-                            <a class="d-flex align-items-center" href="https://www.instagram.com/ppiankara/"
-                                target="_blank">
-                                <img src="2023/img/instagram.png" alt="">
-                                <div class="btn-text cr-headline">
-                                    <span>Stay Up-to-date</span>
-                                    <h4>Our Instagram</h4>
-                                </div>
-                            </a>
                         </div>
-                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- End of Roadmap section
+    ============================================= -->
+
+    <!-- Start of testimonial section
+    ============================================= -->
+    <section id="cr-testimonial" class="cr-testimonial-section">
+        <div class="container">
+            <div class="cr-section-title cr-headline text-center wow fadeFromRight" data-wow-delay="0ms"
+                data-wow-duration="1500ms">
+                <span style="display: block; margin: 0 auto; text-align: center;">Gallery</span>
+                <h2 style="display: block; margin: 0 auto; text-align: center;">1<sup>st</sup> Ankara Leadership
+                    Experience</h2>
+            </div>
+
+            <div class="cr-testimonial-content">
+                <div id="nanogallery2" data-nanogallery2='{
+                    "thumbnailHeight":  250,
+                    "thumbnailWidth":   350
+                }'>
+
+                    <!-- gallery content -->
+                    <a href="2023/img/1.JPG" data-ngThumb="2023/img/1.JPG"></a>
+                    <a href="2023/img/2.JPG" data-ngThumb="2023/img/2.JPG"></a>
+                    <a href="2023/img/3.JPG" data-ngThumb="2023/img/3.JPG"></a>
+                    <a href="2023/img/4.JPG" data-ngThumb="2023/img/4.JPG"></a>
+                    <a href="2023/img/5.JPG" data-ngThumb="2023/img/5.JPG"></a>
+                    <a href="2023/img/6.JPG" data-ngThumb="2023/img/6.JPG"></a>
+                    <a href="2023/img/7.JPG" data-ngThumb="2023/img/7.JPG"></a>
+                    <a href="2023/img/8.JPG" data-ngThumb="2023/img/8.JPG"></a>
+                    <a href="2023/img/9.JPG" data-ngThumb="2023/img/9.JPG"></a>
+                    <a href="2023/img/10.JPG" data-ngThumb="2023/img/10.JPG"></a>
+                    <a href="2023/img/11.JPG" data-ngThumb="2023/img/11.JPG"></a>
+                    <a href="2023/img/12.JPG" data-ngThumb="2023/img/12.JPG"></a>
                 </div>
             </div>
-        </section>
-        <!-- End of app download section
+        </div>
+        <style>
+            .cr-section-title {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                text-align: center;
+            }
+        </style>
+    </section>
+
+
+    <!-- End of testimonial section
     ============================================= -->
 
-        <!-- Start of Blog section
+    <!-- Start of app download section
     ============================================= -->
-        <section id="cr-blog" class="cr-blog-section ">
-            <div class="container">
-                <div class="cr-section-title cr-headline cr-blog-section text-center">
-                    <span>Partner</span>
-                    <h2>Our Sponsor</h2>
+    <section id="cr-app-download" class="cr-app-download-section">
+        <div class="container">
+            <div class="cr-app-download-content cr-headline pera-content position-relative"
+                data-background="2023/img/app-bg.png">
+                <span class="cr-shape2 position-absolute"><img src="2023/img/crypto/shape/st8.png" alt=""></span>
+                <div class="cr-shape1 position-absolute">
+                    <img src="2023/img/crypto/shape/cir.png" alt="">
                 </div>
-                <div class="cr-partner-slide owl-carousel">
-                    <div class="cr-parner-img">
-                        <a href="#"><img src="2023/img/PPI Logo.png" alt="">
-
-                        </a>
-                    </div>
-                    <div class="cr-parner-img">
-                        <a href="#"><img src="2023/img/PPI Logo.png" alt="">
-
-                        </a>
-                    </div>
-                    <div class="cr-parner-img">
-                        <a href="#"><img src="2023/img/PPI Logo.png" alt="">
-
-                        </a>
-                    </div>
-                    <div class="cr-parner-img">
-                        <a href="#"><img src="2023/img/PPI Logo.png" alt="">
-
-                        </a>
-                    </div>
-                    <div class="cr-parner-img">
-                        <a href="#"><img src="2023/img/PPI Logo.png" alt="">
-
+                <div class="cr-app-download-img position-absolute">
+                    <img src="2023/img/banner.png" alt="">
+                </div>
+                <div class="cr-app-download-text-wrapper">
+                    <h2>ALE 2023</h2>
+                    <p>BERWARNA BERMAKNA BERWARNA BERMAKNA</p>
+                    <div class="cr-app-download-btn d-flex">
+                        <a class="d-flex align-items-center" href="https://www.instagram.com/ppiankara/"
+                            target="_blank">
+                            <img src="2023/img/instagram.png" alt="">
+                            <div class="btn-text cr-headline">
+                                <span>Stay Up-to-date</span>
+                                <h4>Our Instagram</h4>
+                            </div>
                         </a>
                     </div>
                 </div>
             </div>
-            </div>
-        </section>
-        <!-- End of Blog section
+        </div>
+    </section>
+    <!-- End of app download section
     ============================================= -->
 
-        <!-- Start of Register  section
+    <!-- Start of Blog section
     ============================================= -->
-        <section id="cr-register" class="cr-register-section position-relative"
-            data-background="2023/img/rg-bg.png">
-            <div class="cr-register-img position-absolute">
-                <img src="2023/img/banner.png" alt="">
+    <section id="cr-blog" class="cr-blog-section ">
+        <div class="container">
+            <div class="cr-section-title cr-headline cr-blog-section text-center">
+                <span>Partner</span>
+                <h2>Our Sponsor</h2>
             </div>
-            <div class="container">
-                <div class="cr-register-content text-center">
-                    <div class="cr-section-title text-center cr-headline">
-                        <h2>Let's Join our Event</h2>
-                        <p>ALE 2023 - BERWARNA BERMAKNA BERWARNA BERMAKNA</p>
-                    </div>
-                    <div class="cr-btn d-flex justify-content-center">
-                        <a class="d-flex justify-content-center align-items-center" href="register" target="_blank">Register
-                            Now</a>
-                    </div>
+            <div class="cr-partner-slide owl-carousel">
+                <div class="cr-parner-img">
+                    <a href="#"><img src="2023/img/PPI Logo.png" alt="">
+
+                    </a>
+                </div>
+                <div class="cr-parner-img">
+                    <a href="#"><img src="2023/img/PPI Logo.png" alt="">
+
+                    </a>
+                </div>
+                <div class="cr-parner-img">
+                    <a href="#"><img src="2023/img/PPI Logo.png" alt="">
+
+                    </a>
+                </div>
+                <div class="cr-parner-img">
+                    <a href="#"><img src="2023/img/PPI Logo.png" alt="">
+
+                    </a>
+                </div>
+                <div class="cr-parner-img">
+                    <a href="#"><img src="2023/img/PPI Logo.png" alt="">
+
+                    </a>
                 </div>
             </div>
-        </section>
-        <!-- End of Register section
+        </div>
+        </div>
+    </section>
+    <!-- End of Blog section
     ============================================= -->
 
-        <!-- Start of Footer  section
+    <!-- Start of Register  section
     ============================================= -->
-        <section id="cr-footer" class="cr-footer-section position-relative">
-            <span class="cr-shape1 position-absolute"><img src="2023/img/sh5.png"
-                    alt=""></span>
-            <div class="container">
-                <div class="cr-footer-content d-flex">
-                    <div class="cr-footer-widget-left">
-                        <div class="cr-footer-widget">
-                            <div class="logo-widget d-flex align-items-center">
-                                <div class="footer-logo">
-                                    <a href="#"><img src="2023/img/banner.png" alt=""></a>
-                                </div>
-                                <div class="logo-text">
-                                    @PPI Ankara - Berwarna Bermakna
-                                </div>
+    <section id="cr-register" class="cr-register-section position-relative" data-background="2023/img/rg-bg.png">
+        <div class="cr-register-img position-absolute">
+            <img src="2023/img/banner.png" alt="">
+        </div>
+        <div class="container">
+            <div class="cr-register-content text-center">
+                <div class="cr-section-title text-center cr-headline">
+                    <h2>Let's Join our Event</h2>
+                    <p>ALE 2023 - BERWARNA BERMAKNA BERWARNA BERMAKNA</p>
+                </div>
+                <div class="cr-btn d-flex justify-content-center">
+                    <a class="d-flex justify-content-center align-items-center" href="register" target="_blank">Register
+                        Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Register section
+    ============================================= -->
+
+    <!-- Start of Footer  section
+    ============================================= -->
+    <section id="cr-footer" class="cr-footer-section position-relative">
+        <span class="cr-shape1 position-absolute"><img src="2023/img/sh5.png" alt=""></span>
+        <div class="container">
+            <div class="cr-footer-content d-flex">
+                <div class="cr-footer-widget-left">
+                    <div class="cr-footer-widget">
+                        <div class="logo-widget d-flex align-items-center">
+                            <div class="footer-logo">
+                                <a href="#"><img src="2023/img/banner.png" alt=""></a>
                             </div>
-                        </div>
-                        <div class="cr-footer-widget-area d-flex justify-content-between">
-                            <div class="cr-footer-widget cr-headline pera-content ul-li-block">
-                                <div class="newslatter-widget">
-                                    <h3 class="widget-title">Get In Touch</h3>
-                                    <p>If you have any question, please send us a messages 😁</p>
-                                    <form action="#">
-
-                                        <div class="form-group">
-                                            <input class="form-control" id="your_name" name="userName"
-                                                placeholder="Name" required="" type="text">
-                                        </div>
-                                        <div class="form-group">
-                                            <input class="form-control" id="your_number" name="userNumber"
-                                                placeholder="WhatsApp Number" required="" type="number">
-                                        </div>
-                                        <div class="form-group">
-                                            <input class="form-control" id="subject" name="userSubject"
-                                                placeholder="Subject" required="" type="text">
-                                        </div>
-                                        <div class="form-group">
-                                            <input class="form-control" id="userMessage" name="userMessage"
-                                                placeholder="Pesan Anda" required="" type="text">
-                                        </div>
-
-                                        <button onclick="share()" id="submit_btn"><i
-                                                class="fab fa-whatsapp"></i></button>
-
-
-                                    </form>
-                                </div>
+                            <div class="logo-text">
+                                @PPI Ankara - Berwarna Bermakna
                             </div>
                         </div>
                     </div>
-                    <div class="cr-footer-widget-right">
+                    <div class="cr-footer-widget-area d-flex justify-content-between">
                         <div class="cr-footer-widget cr-headline pera-content ul-li-block">
                             <div class="newslatter-widget">
-                                <div class="address-widget">
-                                    <h3 class="widget-title">Contact Us</h3>
-                                    <ul>
-                                        <li><i class="fas fa-map-marker-alt"></i> <span>Perhimpunan Perlajar Indonesia
-                                                Ankara
-                                            </span></li>
-                                        <li><i class="fas fa-envelope"></i> <a
-                                                href="mailto:ankaraleadershipexperience@gmail.com" target="_blank">Email
-                                                <b>Click Here</b></a>
-                                        </li>
-                                        <li><i class="fas fa-phone"></i> <span> Humas <a href="#" target="_blank">
-                                                    <a href="https://wa.me/080808080" target="_blank"> <b>Click
-                                                            Here</b></a>
-                                            </span> </li>
-                                        <li><i class="fas fa-bank"></i> <span> Sponsorship <a
-                                                    href="https://wa.me/080808080 " target="_blank"><b>Click Here</b>
-                                                </a> </span> </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cr-footer-widget cr-headline pera-content ul-li-block">
-                            <div class="social-widget">
-                                <h3 class="widget-title">More Info</h3>
-                                <a href="https://www.instagram.com/ppiankara" target="_blank"><i
-                                        class="fab fa-instagram"></i></a>
-                                <a href="https://ppiankara.org" target="_blank"><i class="fa fa-globe"></i></a>
-                                <a href="https://www.youtube.com/PPIAnkara" target="_blank">
-                                    <i class="fab fa-youtube"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="cr-footer-copyright">
-                <div class="container">
-                    <div class="cr-footer-copyright-content d-flex justify-content-between">
-                        <div class="copyright-text">
-                            Copyright ALE 2023 Made With ♥️
-                            <meta name="keywords" content="ALE 2023 ALE 2023 PPI ANKARA">
-                        </div>
+                                <h3 class="widget-title">Get In Touch</h3>
+                                <p>If you have any question, please send us a messages 😁</p>
+                                <form action="#">
 
+                                    <div class="form-group">
+                                        <input class="form-control" id="your_name" name="userName" placeholder="Name"
+                                            required="" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" id="your_number" name="userNumber"
+                                            placeholder="WhatsApp Number" required="" type="number">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" id="subject" name="userSubject"
+                                            placeholder="Subject" required="" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" id="userMessage" name="userMessage"
+                                            placeholder="Pesan Anda" required="" type="text">
+                                    </div>
+
+                                    <button onclick="share()" id="submit_btn"><i class="fab fa-whatsapp"></i></button>
+
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cr-footer-widget-right">
+                    <div class="cr-footer-widget cr-headline pera-content ul-li-block">
+                        <div class="newslatter-widget">
+                            <div class="address-widget">
+                                <h3 class="widget-title">Contact Us</h3>
+                                <ul>
+                                    <li><i class="fas fa-map-marker-alt"></i> <span>Perhimpunan Perlajar Indonesia
+                                            Ankara
+                                        </span></li>
+                                    <li><i class="fas fa-envelope"></i> <a
+                                            href="mailto:ankaraleadershipexperience@gmail.com" target="_blank">Email
+                                            <b>Click Here</b></a>
+                                    </li>
+                                    <li><i class="fas fa-phone"></i> <span> Humas <a href="#" target="_blank">
+                                                <a href="https://wa.me/080808080" target="_blank"> <b>Click
+                                                        Here</b></a>
+                                        </span> </li>
+                                    <li><i class="fas fa-bank"></i> <span> Sponsorship <a
+                                                href="https://wa.me/080808080 " target="_blank"><b>Click Here</b>
+                                            </a> </span> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cr-footer-widget cr-headline pera-content ul-li-block">
+                        <div class="social-widget">
+                            <h3 class="widget-title">More Info</h3>
+                            <a href="https://www.instagram.com/ppiankara" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://ppiankara.org" target="_blank"><i class="fa fa-globe"></i></a>
+                            <a href="https://www.youtube.com/PPIAnkara" target="_blank">
+                                <i class="fab fa-youtube"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+
+
+
+
+        <div class="cr-footer-copyright">
+            <div class="container">
+                <div class="cr-footer-copyright-content">
+                    <div class="row justify-content-between">
+                        <div class="col-auto">
+                            <span>© 2023 ALE Made With ♥️</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <!-- End of Footer  section
     ============================================= -->
+
+        <!-- Start of Translate  section
+    ============================================= -->
+
+        <!-- End of Translate  section
+    ============================================= -->
+
+
+
+
+
 
         <!-- JS library -->
         <script src="2023/js/jquery.js"></script>
@@ -826,6 +850,7 @@
         <script src="2023/js/knob.js"></script>
         <script src="2023/js/crypto.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.5/jquery.nanogallery2.min.js"></script>
+
 
         <script>
             // User-defined function to share some message on WhatsApp 
@@ -845,6 +870,6 @@
 
         </script>
 
-    </body>
+</body>
 
 </html>
