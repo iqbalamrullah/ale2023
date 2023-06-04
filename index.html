@@ -137,28 +137,64 @@
 
     <!-- Start of Banner section
     ============================================= -->
-    <section id="home-nc" class="cripto-banner-section position-relative" data-background="">
-        <span class="cr-banner-shape1 position-absolute"><img src="https://nuclears.id/2023/img/crypto/shape/s-sh1.png"
-                alt=""></span>
-        <span class="cr-banner-shape2 position-absolute"><img src="https://nuclears.id/2023/img/crypto/shape/s-sh2.png"
-                alt=""></span>
-        <span class="cr-banner-shape4 position-absolute"><img src="https://nuclears.id/2023/img/crypto/shape/bit2.png"
-                alt=""></span>
-        <!-- <span class="cr-banner-shape5 position-absolute"><img src="https://nuclears.id/2023/img/crypto/shape/bit3.png" alt=""></span> -->
-        <span class="cr-banner-shape6 position-absolute"><img src="https://nuclears.id/2023/img/crypto/shape/st9.png"
-                alt=""></span>
+    <section id="home-nc" class="cripto-banner-section position-relative" data-background="2023/img/bg-header.png">
+        <span class="cr-banner-shape1 position-absolute"><img src="2023/img/s-sh1.png" alt=""></span>
+        <span class="cr-banner-shape2 position-absolute"><img src="2023/img/s-sh2.png" alt=""></span>
+        <span class="cr-banner-shape4 position-absolute"><img src="2023/img/bit2.png" alt=""></span>
+        <span class="cr-banner-shape5 position-absolute"><img src="2023/img/banner.png" alt=""></span> -->
+        <span class="cr-banner-shape6 position-absolute"><img src="2023/img/st9.png" alt=""></span>
         <div class="container">
             <div class="cripto-banner-text cr-headline pera-content">
-                <h1 class="wow fadeFromUp" data-wow-delay="300ms" data-wow-duration="1500ms">
-                    ALE <span>2023</span>
-
+                <h1 class="wow fadeFromUp text-left" data-wow-delay="300ms" data-wow-duration="1500ms" style="font-family: 'Horizon', sans-serif;">
+                    <span style="display: block; margin: 0; color: rgb(255, 255, 255);">ALE <span style="color: rgb(63, 208, 124);">2023</span></span>
                 </h1>
-                <p class="wow fadeFromUp" data-wow-delay="600ms" data-wow-duration="1500ms">
-                    BERWARNA BERMAKNA BERWARNA BERMAKNA
+                <p class="wow fadeFromUp text-left" data-wow-delay="600ms" data-wow-duration="1500ms" style="font-family: 'Horizon', sans-serif;">
+                    <span id="animated-text-loop"></span>
                 </p>
             </div>
         </div>
     </section>
+    
+    <script>
+        var words = ["BERWARNA BERMAKNA BERWARNA BERMAKNA", "BERWARNA BERMAKNA BERWARNA BERMAKNA"];
+        var currentWordIndex = 0;
+        var currentCharIndex = 0;
+        var isDeleting = false;
+        var typingSpeed = 100;
+        var deletingSpeed = 80;
+        var delayBetweenWords = 1000;
+    
+        function animateText() {
+            var animatedTextLoopElement = document.getElementById("animated-text-loop");
+            var currentWord = words[currentWordIndex];
+    
+            if (!isDeleting && currentCharIndex < currentWord.length) {
+                animatedTextLoopElement.innerHTML += currentWord.charAt(currentCharIndex);
+                currentCharIndex++;
+                setTimeout(animateText, typingSpeed);
+            } else if (isDeleting && currentCharIndex >= 0) {
+                var truncatedText = currentWord.substring(0, currentCharIndex);
+                animatedTextLoopElement.innerHTML = truncatedText;
+                currentCharIndex--;
+                setTimeout(animateText, deletingSpeed);
+            } else {
+                isDeleting = !isDeleting;
+    
+                if (!isDeleting) {
+                    currentWordIndex = (currentWordIndex + 1) % words.length;
+                }
+    
+                if (isDeleting && currentCharIndex === -1) {
+                    setTimeout(animateText, delayBetweenWords);
+                } else {
+                    setTimeout(animateText, typingSpeed);
+                }
+            }
+        }
+    
+        animateText();
+    </script>
+    
     <!-- End of Banner section
     ============================================= -->
 
@@ -329,7 +365,7 @@
                                 <div class="cr-section-title cr-headline">
                                     <span>BERWARNA BERMAKNA BERWARNA BERMAKNA</span>
                                     <h2>Tujuan ALE</h2>
-                                    <img src="#" width="50%">
+                                    <img src="2023/img/banner.png" width="50%">
                                 </div>
                                 <div class="cr-feature-text-area">
                                     <p>
@@ -644,7 +680,7 @@
         <!-- Start of Register  section
     ============================================= -->
         <section id="cr-register" class="cr-register-section position-relative"
-            data-background="https://nuclears.id/2023/img/crypto/bg/rg-bg.png">
+            data-background="2023/img/rg-bg.png">
             <div class="cr-register-img position-absolute">
                 <img src="2023/img/banner.png" alt="">
             </div>
@@ -667,7 +703,7 @@
         <!-- Start of Footer  section
     ============================================= -->
         <section id="cr-footer" class="cr-footer-section position-relative">
-            <span class="cr-shape1 position-absolute"><img src="https://nuclears.id/2023/img/crypto/shape/sh5.png"
+            <span class="cr-shape1 position-absolute"><img src="2023/img/sh5.png"
                     alt=""></span>
             <div class="container">
                 <div class="cr-footer-content d-flex">
