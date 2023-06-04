@@ -226,7 +226,7 @@
                     .custom-container .countdown {
                         font-size: 55px;
                         font-weight: bold;
-                        color: #1eda24;
+                        color: rgb(63, 208, 124);
                         font-family: 'Horizon', sans-serif;
 
 
@@ -259,8 +259,8 @@
                             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
                             // Display the countdown in the element with id="countdown"
-                            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-                                + minutes + "m " + seconds + "s ";
+                            document.getElementById("countdown").innerHTML = days + "D " + hours + "H "
+                                + minutes + "M " + seconds + "S ";
 
                             // If the countdown is finished, display a message
                             if (distance < 0) {
