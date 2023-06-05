@@ -135,28 +135,25 @@
                 
                 <script>
                     document.addEventListener('DOMContentLoaded', function() {
-                        // Memanggil elemen mobile menu wrap
+                        // Mengambil elemen menu dan tombol menu
                         var mobileMenuWrap = document.querySelector('.cr-mobile_menu_wrap');
+                        var mobileMenuButton = document.querySelectorAll('.cr-open_mobile_menu');
                 
                         // Menambahkan kelas CSS "open" pada elemen mobile menu wrap
                         mobileMenuWrap.classList.add('open');
-                
-                        // Mengambil elemen menu dan tombol menu
-                        var mobileMenu = document.querySelector('.cr-mobile_menu_wrap');
-                        var mobileMenuButton = document.querySelectorAll('.cr-open_mobile_menu');
                 
                         // Menambahkan event listener pada setiap tombol menu
                         mobileMenuButton.forEach(function(button) {
                             button.addEventListener('click', function() {
                                 // Memeriksa apakah menu sedang terbuka atau tertutup
-                                var isOpen = mobileMenu.classList.contains('open');
+                                var isOpen = mobileMenuWrap.classList.contains('open');
                 
                                 if (isOpen) {
                                     // Menutup menu jika sedang terbuka
-                                    mobileMenu.classList.remove('open');
+                                    mobileMenuWrap.classList.remove('open');
                                 } else {
                                     // Membuka menu jika sedang tertutup
-                                    mobileMenu.classList.add('open');
+                                    mobileMenuWrap.classList.add('open');
                                 }
                             });
                         });
@@ -166,11 +163,12 @@
                 
                         menuItems.forEach(function(item) {
                             item.addEventListener('click', function() {
-                                mobileMenu.classList.remove('open');
+                                mobileMenuWrap.classList.remove('open');
                             });
                         });
                     });
                 </script>
+                
                 
                 
                 
