@@ -126,13 +126,21 @@
                                             Now</a>
                                     </div>
                                 </li>
-
                             </ul>
                         </nav>
                     </div>
                 </div>
                 <!-- /Mobile-Menu -->
             </div>
+            
+            <script>
+                // Memanggil elemen mobile menu wrap
+                var mobileMenuWrap = document.querySelector('.cr-mobile_menu_wrap');
+            
+                // Menambahkan kelas CSS "open" pada elemen mobile menu wrap
+                mobileMenuWrap.classList.add('open');
+            </script>
+            
     </header>
     <!-- End of Header section
     ============================================= -->
@@ -875,6 +883,36 @@
             }
 
         </script>
+<script>
+    // Mengambil elemen menu dan tombol menu
+    var mobileMenu = document.querySelector('.cr-mobile_menu_wrap');
+    var mobileMenuButton = document.querySelectorAll('.cr-open_mobile_menu');
+
+    // Menambahkan event listener pada setiap tombol menu
+    mobileMenuButton.forEach(function(button) {
+        button.addEventListener('click', function() {
+            // Memeriksa apakah menu sedang terbuka atau tertutup
+            var isOpen = mobileMenu.classList.contains('open');
+
+            if (isOpen) {
+                // Menutup menu jika sedang terbuka
+                mobileMenu.classList.remove('open');
+            } else {
+                // Membuka menu jika sedang tertutup
+                mobileMenu.classList.add('open');
+            }
+        });
+    });
+
+    // Menutup menu saat salah satu menu diklik
+    var menuItems = document.querySelectorAll('.cr-mobile-main-navigation a');
+
+    menuItems.forEach(function(item) {
+        item.addEventListener('click', function() {
+            mobileMenu.classList.remove('open');
+        });
+    });
+</script>
 
 </body>
 
