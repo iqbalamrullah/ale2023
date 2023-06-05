@@ -109,7 +109,7 @@
                             <i class="fas fa-times"></i>
                         </div>
                         <div class="m-brand-logo text-center">
-                            <a href="!#"><img src="2023/img/logo-header.png" alt=""></a>
+                            <a href="!#"><img src="2023/img/logo-header.png"></a>
                         </div>
                         <nav class="cr-mobile-main-navigation  clearfix ul-li">
                             <ul id="m-main-nav" class="navbar-nav text-capitalize clearfix">
@@ -131,15 +131,49 @@
                     </div>
                 </div>
                 <!-- /Mobile-Menu -->
-            </div>
-            
-            <script>
-                // Memanggil elemen mobile menu wrap
-                var mobileMenuWrap = document.querySelector('.cr-mobile_menu_wrap');
-            
-                // Menambahkan kelas CSS "open" pada elemen mobile menu wrap
-                mobileMenuWrap.classList.add('open');
-            </script>
+                </div>
+                
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        // Memanggil elemen mobile menu wrap
+                        var mobileMenuWrap = document.querySelector('.cr-mobile_menu_wrap');
+                
+                        // Menambahkan kelas CSS "open" pada elemen mobile menu wrap
+                        mobileMenuWrap.classList.add('open');
+                
+                        // Mengambil elemen menu dan tombol menu
+                        var mobileMenu = document.querySelector('.cr-mobile_menu_wrap');
+                        var mobileMenuButton = document.querySelectorAll('.cr-open_mobile_menu');
+                
+                        // Menambahkan event listener pada setiap tombol menu
+                        mobileMenuButton.forEach(function(button) {
+                            button.addEventListener('click', function() {
+                                // Memeriksa apakah menu sedang terbuka atau tertutup
+                                var isOpen = mobileMenu.classList.contains('open');
+                
+                                if (isOpen) {
+                                    // Menutup menu jika sedang terbuka
+                                    mobileMenu.classList.remove('open');
+                                } else {
+                                    // Membuka menu jika sedang tertutup
+                                    mobileMenu.classList.add('open');
+                                }
+                            });
+                        });
+                
+                        // Menutup menu saat salah satu menu diklik
+                        var menuItems = document.querySelectorAll('.cr-mobile-main-navigation a');
+                
+                        menuItems.forEach(function(item) {
+                            item.addEventListener('click', function() {
+                                mobileMenu.classList.remove('open');
+                            });
+                        });
+                    });
+                </script>
+                
+                
+                
             
     </header>
     <!-- End of Header section
@@ -272,7 +306,7 @@
                             // If the countdown is finished, display a message
                             if (distance < 0) {
                                 clearInterval(countdownInterval);
-                                document.getElementById("countdown").innerHTML = "Countdown expired";
+                                document.getElementById("countdown").innerHTML = "Event Start";
                             }
                         }, 1000);
                     </script>
@@ -883,36 +917,7 @@
             }
 
         </script>
-<script>
-    // Mengambil elemen menu dan tombol menu
-    var mobileMenu = document.querySelector('.cr-mobile_menu_wrap');
-    var mobileMenuButton = document.querySelectorAll('.cr-open_mobile_menu');
 
-    // Menambahkan event listener pada setiap tombol menu
-    mobileMenuButton.forEach(function(button) {
-        button.addEventListener('click', function() {
-            // Memeriksa apakah menu sedang terbuka atau tertutup
-            var isOpen = mobileMenu.classList.contains('open');
-
-            if (isOpen) {
-                // Menutup menu jika sedang terbuka
-                mobileMenu.classList.remove('open');
-            } else {
-                // Membuka menu jika sedang tertutup
-                mobileMenu.classList.add('open');
-            }
-        });
-    });
-
-    // Menutup menu saat salah satu menu diklik
-    var menuItems = document.querySelectorAll('.cr-mobile-main-navigation a');
-
-    menuItems.forEach(function(item) {
-        item.addEventListener('click', function() {
-            mobileMenu.classList.remove('open');
-        });
-    });
-</script>
 
 </body>
 
