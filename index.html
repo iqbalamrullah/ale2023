@@ -135,58 +135,6 @@
             </div>
             <!-- /Mobile-Menu -->
         </div>
-        
-        <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var mobileMenuWrap = document.querySelector('.cr-mobile_menu_wrap');
-        var mobileMenuButton = document.querySelectorAll('.cr-open_mobile_menu');
-
-        mobileMenuWrap.classList.add('open');
-
-        mobileMenuButton.forEach(function (button) {
-            button.addEventListener('click', function () {
-                var isOpen = mobileMenuWrap.classList.contains('open');
-
-                if (isOpen) {
-                    mobileMenuWrap.classList.remove('open');
-                } else {
-                    mobileMenuWrap.classList.add('open');
-                }
-            });
-        });
-
-        var menuItems = document.querySelectorAll('.cr-mobile-main-navigation a');
-
-        menuItems.forEach(function (item) {
-            item.addEventListener('click', function (event) {
-                event.preventDefault();
-
-                var target = this.getAttribute('href');
-
-                var targetElement = document.querySelector(target);
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-
-                // Delay the closing of the mobile menu to allow smooth scrolling
-                setTimeout(function () {
-                    mobileMenuWrap.classList.remove('open');
-                }, 500); // Adjust the delay time (in milliseconds) as needed
-            });
-        });
-        
-        var mobileMenuOverlay = document.querySelector('.mobile_menu_overlay');
-        
-        mobileMenuOverlay.addEventListener('click', function () {
-            mobileMenuWrap.classList.remove('open');
-        });
-    });
-</script>
-        
-
-
-
-
 
 </header>
 <!-- End of Header section

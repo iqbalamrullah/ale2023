@@ -749,6 +749,17 @@ select:visited {
   position: absolute;
 }
 
+.cr-mobile_menu {
+  /* Properti lain untuk mobile menu */
+  outline: none;
+  transition: outline 0.3s ease-in-out;
+}
+
+.cr-mobile_menu:focus {
+  outline: solid 2px #d60606;
+}
+
+
 /*---------------------------------------------------- */
 /*Banner area*/
 /*----------------------------------------------------*/
