@@ -179,7 +179,22 @@ div#cr-preloader {
   overflow: visible;
   background-color: #fff;
   background: #fff url("../img/pre.svg") no-repeat center center;
-}
+
+   /* Animasi */
+   animation-name: fadeOut;
+   animation-duration: 3s;
+   animation-fill-mode: forwards;
+ }
+ 
+ @keyframes fadeOut {
+   0% {
+     opacity: 1;
+   }
+   100% {
+     opacity: 0;
+     display: none;
+   }
+ }
 
 [data-background] {
   background-size: cover;
