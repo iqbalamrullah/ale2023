@@ -121,7 +121,7 @@ theme.
   margin: 0;
   padding: 0;
   color: #ADADAD;
-  font-size: 16px;
+  font-size: 15px;
   overflow-x: hidden;
   line-height: 1.625;
   background-color: #07252a;
@@ -1694,10 +1694,10 @@ select:visited {
 }
 
 .cr-team-inner-item .thx-inner-img {
-  width: 80px;
-  height: 80px;
-  margin-right: 16px;
-  border-radius: 100%;
+  width: 220px;
+  height: 130px;
+  margin-right: 20px;
+  border-radius: 120%;
 }
 
 .cr-team-inner-item .thx-inner-text h3 {
